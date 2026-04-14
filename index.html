@@ -17,79 +17,137 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <h1>Song Recommender</h1>
     <h2 id="msg">Enter your name: </h2>
     <input type="text" id="name">
+    <button id="start">Start</button>
+
+    <h3> Answer these 10 questions, and you will be recommended a song most likely to align with your interests from Spotify's current top 200 songs. <div id = "intro"> </h3>
 
     <!-- question 1 -->
+    <div class="question" id="q1">
     <h3> 1. Which of these would you consider your favorite genre?</h3>
-    <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Easy</label>
-    <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Medium</label>
-    <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
-    <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
+    <h4>
+        <!-- <div style="display: flex; flex-direction: column;"> -->
+    <input type="radio" name="group1" id="a" value="1"> <label for="e">Pop</label>
+    <input type="radio" name="group1" id="b" value="2"> <label for="m">Rock</label>
+    <input type="radio" name="group1" id="a" value="3"> <label for="h">Country</label>
+    <input type="radio" name="group1" id="a" value="4"> <label for="h">Rap</label>
+    <!-- </div> -->
+   </h4>
+   <button class="submit" data-next="q2">Next Question</button>
+   </div>
 
     <!-- question 2 -->
+    <div class="question" id="q2" style="display: none;">
     <h3> 2. Which of these would you consider your favorite artist?</h3>
- <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Easy</label>
-    <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Medium</label>
-    <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
-    <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
+    <h4>
+    <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Sabrina Carpenter</label>
+    <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Taylor Swift</label>
+    <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Ed Sheeran</label>
+    <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Britney Spears</label>
+   </h4>
+   <button class="submit" data-next="q3">Next Question</button>
+   </div>
 
     <!-- question 3 -->
+    <div class="question" id="q3" style="display: none;">
     <h3> 3. Which of these would you consider your favorite artist?</h3>
+    <h4> 
      <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Easy</label>
     <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Medium</label>
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
-
+</h4>
+<button class="submit" data-next="q4">Next Question</button>
+</div>
 
     <!-- question 4 -->
+    <div class="question" id="q4" style="display: none;">
     <h3> 4. Which of these would you consider your favorite artist?</h3>
+    <h4>
  <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Easy</label>
     <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Medium</label>
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
+</h4>
+<button class="submit" data-next="q5">Next Question</button>
+</div>
 
     <!-- question 5 -->
+    <div class="question" id="q5" style="display: none;">
     <h3> 5. Which of these would you consider your favorite artist?</h3>
+    <h4>
  <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Easy</label>
     <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Medium</label>
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
+</h4>
+<button class="submit" data-next="q6">Next Question</button>
+</div>
 
     <!-- question 6 -->
+    <div class="question" id="q6" style="display: none;">
     <h3> 6. Which of these would you consider your favorite artist?</h3>
+    <h4>
  <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Easy</label>
     <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Medium</label>
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
+</h4>
+<button class="submit" data-next="q7">Next Question</button>
+</div>
 
     <!-- question 7 -->
+    <div class="question" id="q7" style="display: none;">
     <h3> 7. Which of these would you consider your favorite artist?</h3>
+    <h4>
  <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Easy</label>
     <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Medium</label>
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
+</h4>
+<button class="submit" data-next="q8">Next Question</button>
+</div>
 
     <!-- question 8 -->
+    <div class="question" id="q8" style="display: none;">
     <h3> 8. Which of these would you consider your favorite artist?</h3>
+    <h4>
  <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Easy</label>
     <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Medium</label>
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
+</h4>
+<button class="submit" data-next="q9">Next Question</button>
+</div>
 
     <!-- question 9 -->
+    <div class="question" id="q9" style="display: none;">
     <h3> 9. Which of these would you consider your favorite artist?</h3>
+    <h4>
  <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Easy</label>
     <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Medium</label>
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
+</h4>
+<button class="submit" data-next="q10">Next Question</button>
+</div>
 
     <!-- question 10 -->
+    <div class="question" id="q10" style="display: none;">
     <h3> 10. Which of these would you consider your favorite artist?</h3>
+    <h4>
  <input type="radio" name="Question 1" id="a" value="1"> <label for="e">Easy</label>
     <input type="radio" name="Question 1" id="b" value="2"> <label for="m">Medium</label>
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
+</h4>
+<button class="submit" data-next="result">Finish</button>
+</div>
 
-    <h3> Score: </h3>
+    <!-- <h3> Score: <span id="score"></span></h3> -->
+
+    <div id="result" style="display: none;">
+        <h3>Your recommended song is: <span id="song"></span></h3>
+    </div>
 
 </body>
 </html>

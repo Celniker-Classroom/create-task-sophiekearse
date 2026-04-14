@@ -1,1 +1,36 @@
 /* Add Global styles here */
+body {
+    background-color: #F7E7CE;
+    margin-left: 30px
+    
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 35px
+}
+
+#intro {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 25px
+}
+
+#msg {
+    margin-bottom: 20px
+}
+
+#name {
+    margin-bottom: 10px
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    margin-bottom: 80px;
+    font-size: 20px
+}
