@@ -26,13 +26,13 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <h3> 1. Which of these would you consider your favorite genre?</h3>
     <h4>
         <!-- <div style="display: flex; flex-direction: column;"> -->
-    <input type="radio" name="group1" id="a" value="1"> <label for="e">Pop</label>
-    <input type="radio" name="group1" id="b" value="2"> <label for="m">Rock</label>
-    <input type="radio" name="group1" id="a" value="3"> <label for="h">Country</label>
-    <input type="radio" name="group1" id="a" value="4"> <label for="h">Rap</label>
+    <input type="radio" name="group1" id="a" value="0"> <label for="e">Pop</label>
+    <input type="radio" name="group1" id="b" value="1"> <label for="m">Rock</label>
+    <input type="radio" name="group1" id="a" value="2"> <label for="h">Country</label>
+    <input type="radio" name="group1" id="a" value="3"> <label for="h">Rap</label>
     <!-- </div> -->
    </h4>
-   <button class="submit" data-next="q2">Next Question</button>
+   <button class="submit"  id = "nextQuestion" data-next="q2">Next Question</button>
    </div>
 
     <!-- question 2 -->
@@ -44,7 +44,7 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Ed Sheeran</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Britney Spears</label>
    </h4>
-   <button class="submit" data-next="q3">Next Question</button>
+   <button class="submit"  id = "nextQuestion" data-next="q3">Next Question</button>
    </div>
 
     <!-- question 3 -->
@@ -56,7 +56,7 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
 </h4>
-<button class="submit" data-next="q4">Next Question</button>
+<button class="submit"  id = "nextQuestion" data-next="q4">Next Question</button>
 </div>
 
     <!-- question 4 -->
@@ -68,7 +68,7 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
 </h4>
-<button class="submit" data-next="q5">Next Question</button>
+<button class="submit"  id = "nextQuestion" data-next="q5">Next Question</button>
 </div>
 
     <!-- question 5 -->
@@ -80,7 +80,7 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
 </h4>
-<button class="submit" data-next="q6">Next Question</button>
+<button class="submit"  id = "nextQuestion" data-next="q6">Next Question</button>
 </div>
 
     <!-- question 6 -->
@@ -92,7 +92,7 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
 </h4>
-<button class="submit" data-next="q7">Next Question</button>
+<button class="submit"  id = "nextQuestion" data-next="q7">Next Question</button>
 </div>
 
     <!-- question 7 -->
@@ -104,7 +104,7 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
 </h4>
-<button class="submit" data-next="q8">Next Question</button>
+<button class="submit"  id = "nextQuestion" data-next="q8">Next Question</button>
 </div>
 
     <!-- question 8 -->
@@ -116,7 +116,7 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
 </h4>
-<button class="submit" data-next="q9">Next Question</button>
+<button class="submit"  id = "nextQuestion" data-next="q9">Next Question</button>
 </div>
 
     <!-- question 9 -->
@@ -128,7 +128,7 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
 </h4>
-<button class="submit" data-next="q10">Next Question</button>
+<button class="submit"  id = "nextQuestion" data-next="q10">Next Question</button>
 </div>
 
     <!-- question 10 -->
@@ -140,7 +140,7 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <input type="radio" name="Question 1" id="c" value="3"> <label for="h">Hard</label>
     <input type="radio" name="Question 1" id="d" value="4"> <label for="h">Hard</label>
 </h4>
-<button class="submit" data-next="result">Finish</button>
+<button class="submit"  id = "nextQuestion" data-next="result">Finish</button>
 </div>
 
     <!-- <h3> Score: <span id="score"></span></h3> -->
@@ -148,6 +148,14 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <div id="result" style="display: none;">
         <h3>Your recommended song is: <span id="song"></span></h3>
     </div>
+
+<div class = "question" id = "results" style = "display: none;">
+    <h3> Your Recommended Song: </h3>
+    <div id = "songResult"> 
+        <h2 id = "songTitle"></h2>
+        <p id = "songArtist"></p>
+        <p id = "songGenre"></p>
+</div>
 
 </body>
 </html>
