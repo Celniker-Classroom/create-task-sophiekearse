@@ -48,7 +48,7 @@ document.querySelectorAll('.submit').forEach(button => {
 const recommendedSongs = [
     {
         score: 0,
-        //pop
+        genre: "pop",
         songs: [
             { title: "Choosin' Texas", artist: "Ella Langley" },
             { title: "Man I Need", artist: "Olivia Dean" },
@@ -64,7 +64,7 @@ const recommendedSongs = [
     },
     {
         score: 1,
-        //rock
+        genre: "rock",
         songs: [
             { title: "The Adults Are Talking", artist: "The Strokes" },
             { title: "Dumb", artist: "Nirvana"},
@@ -80,7 +80,7 @@ const recommendedSongs = [
         ],
 
         score: 2,
-        //country
+        genre: "country",
         songs: [
             { title: "Choosin' Texas", artist: "Ella Langley" },
             { title: "I Got Better", artist: "Morgan Wallen"},
@@ -95,7 +95,7 @@ const recommendedSongs = [
         ],
 
         score: 3,
-        //hip hop
+        genre: "hip hop/rap",
         songs: [
             { title: "Insecurities", artist: "Lil Baby"},
             { title: "Minks in Miami", artist: "Rick Ross, French Montana, Max B"},
@@ -116,11 +116,24 @@ const recommendedSongs = [
 ]
 
 function showRecommendation(score) {
-    const song = recommendedSongs.find(s => s.score === score);
-    if (song) {
-        document.getElementById("songTitle").textContent = song.title;
-        document.getElementById("songArtist").textContent = `Artist: ${song.artist}`;
-        document.getElementById("songGenre").textContent = `Genre: ${song.genre}`;
+    const category = recommendedSongs.find(s => s.score === score);
+    if (category) {
+        const randomSong = category.songs[Math.floor(Math.random() * category.songs.length)];
+        document.getElementById("songTitle").textContent = randomSong.title;
+        document.getElementById("songArtist").textContent = `Artist: ${randomSong.artist}`;
+        document.getElementById("songGenre").textContent = `Genre: ${randomSong.genre}`;
         document.getElementById("results").style.display = "block";
     }
 }
+
+
+let score = 0;
+const groups = ['group1', 'group2', 'group3', 'group4', 'group5', 'group6', 'group7', 'group8', 'group9', 'group10'];
+groups.forEach(group => {
+    const selected = document.querySelector(`input[name="${group}"]:checked`);
+    if (answers.length > 0) {
+        score += parseInt(answers[0].value);
+    }
+
+showRecommendation(score);
+});
