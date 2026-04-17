@@ -34,21 +34,5 @@ h4 {
     font-size: 20px
 }
 
-#nextQuestion {
-    color: rgb(0, 0, 0);
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    border: 2px solid black;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-}
 
-.radio-button .radio { 
-    padding: 10px; 
-}
 
-.radio-button .dot { 
-    padding: 8px; 
-}

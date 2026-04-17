@@ -1,27 +1,8 @@
 // add javascript here
-// radio buttons disabled to start
+// Track all user answers
+let answers = [];
 
 const radioButtons = document.querySelectorAll('input[type="radio"]');
-
-radioButtons.forEach(button => {
-    button.disabled = true;
-
-document.getElementById("nextQuestion").disabled = true;
-});
-
-//radio buttons enabled when start button is clicked, start button and name input disabled when start button is clicked
-document.getElementById("start").addEventListener('click', function(event) {
-    radioButtons.forEach(button => {
-        button.disabled = false;
-        document.getElementById("start").disabled = true;
-        document.getElementById("name").disabled = true;
-        document.getElementById("nextQuestion").disabled = false;
-
-    });
-});
-
-//name
-// document.getElementById("name").
 
 // Handle question transitions
 document.querySelectorAll('.submit').forEach(button => {
@@ -32,15 +13,21 @@ document.querySelectorAll('.submit').forEach(button => {
             alert('Please select an answer.');
             return;
         }
+        
+        // Store the selected answer value
+        answers.push(parseInt(selected.value));
+        
         questionDiv.style.display = 'none';
         const next = this.getAttribute('data-next');
         const nextQuestion = document.getElementById(next);
         if (nextQuestion) {
             nextQuestion.style.display = 'block';
+            
+            // If this is the last question, calculate score and show recommendation
+            if (next === 'result') {
+                calculateAndShowScore();
+            }
         }
-
-    
-
     });
 });
 
@@ -77,8 +64,9 @@ const recommendedSongs = [
             { title: "On Melancholy Hill", artist: "Gorillaz"},
             { title: "In the End", artist: "Linkin Park"},
             { title: "Sister Europe", artist: "Foo Fighters"},
-        ],
-
+        ]
+    },
+    {
         score: 2,
         genre: "country",
         songs: [
@@ -121,19 +109,27 @@ function showRecommendation(score) {
         const randomSong = category.songs[Math.floor(Math.random() * category.songs.length)];
         document.getElementById("songTitle").textContent = randomSong.title;
         document.getElementById("songArtist").textContent = `Artist: ${randomSong.artist}`;
-        document.getElementById("songGenre").textContent = `Genre: ${randomSong.genre}`;
+        document.getElementById("songGenre").textContent = `Genre: ${category.genre}`;
         document.getElementById("results").style.display = "block";
     }
 }
 
-
-let score = 0;
-const groups = ['group1', 'group2', 'group3', 'group4', 'group5', 'group6', 'group7', 'group8', 'group9', 'group10'];
-groups.forEach(group => {
-    const selected = document.querySelector(`input[name="${group}"]:checked`);
-    if (answers.length > 0) {
-        score += parseInt(answers[0].value);
+// calculating function
+function calculateAndShowScore() {
+    if (answers.length === 0) {
+        console.log("No answers recorded");
+        return;
     }
+    
+//calculating the average score
+    const totalScore = answers.reduce((sum, val) => sum + val, 0);
+    const averageScore = totalScore / answers.length;
+    const finalScore = Math.round(averageScore);
+    
+    console.log(`Total answers: ${answers.length}, Average: ${averageScore.toFixed(2)}, Final score: ${finalScore}`);
+    console.log("All answers:", answers);
+    
+ //display recommendation
+    showRecommendation(finalScore);
+}
 
-showRecommendation(score);
-});

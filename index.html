@@ -15,11 +15,7 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
 </head>
 <body>
     <h1>Song Recommender</h1>
-    <h2 id="msg">Enter your name: </h2>
-    <input type="text" id="name">
-    <button id="start">Start</button>
-
-    <h3> Answer these 10 questions, and you will be recommended a song most likely to align with your interests from Spotify's current top 200 songs. <div id = "intro"> </h3>
+    <h2> Answer these 10 questions, and you will be recommended a song most likely to align with your interests from Spotify's current top 200 songs. <div id = "intro"> </h3>
 
     <!-- question 1 -->
     <div class="question" id="q1">
@@ -40,9 +36,9 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <h3> 2. Which of these would you consider your favorite artist?</h3>
     <h4>
     <input type="radio" name="group2" id="a" value="0"> <label for="e">Sabrina Carpenter</label>
-    <input type="radio" name="group2" id="b" value="1"> <label for="m">Taylor Swift</label>
-    <input type="radio" name="group2" id="c" value="2"> <label for="h">Ed Sheeran</label>
-    <input type="radio" name="group2" id="d" value="3"> <label for="h">Britney Spears</label>
+    <input type="radio" name="group2" id="b" value="2"> <label for="m">Morgan Wallen</label>
+    <input type="radio" name="group2" id="c" value="3"> <label for="h">Drake</label>
+    <input type="radio" name="group2" id="d" value="1"> <label for="h">Pink Floyd</label>
    </h4>
    <button class="submit"  id = "nextQuestion" data-next="q3">Next Question</button>
    </div>
@@ -51,10 +47,10 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <div class="question" id="q3" style="display: none;">
     <h3> 3. What is your favorite decade of music?</h3>
     <h4> 
-     <input type="radio" name="group3" id="a" value="0"> <label for="e">2010s-2020s</label>
-    <input type="radio" name="group3" id="b" value="1"> <label for="m">2000s</label>
-    <input type="radio" name="group3" id="c" value="2"> <label for="h">1990s</label>
-    <input type="radio" name="group3" id="d" value="3"> <label for="h">1980s</label>
+     <input type="radio" name="group3" id="a" value="1"> <label for="e">2010s-2020s</label>
+    <input type="radio" name="group3" id="b" value="0"> <label for="m">2000s</label>
+    <input type="radio" name="group3" id="c" value="3"> <label for="h">1990s</label>
+    <input type="radio" name="group3" id="d" value="1"> <label for="h">1980s</label>
 </h4>
 <button class="submit"  id = "nextQuestion" data-next="q4">Next Question</button>
 </div>
@@ -150,7 +146,6 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     </div>
 
 <div class = "question" id = "results" style = "display: none;">
-    <h3> Your Recommended Song: </h3>
     <div id = "songResult"> 
         <h2 id = "songTitle"></h2>
         <p id = "songArtist"></p>
