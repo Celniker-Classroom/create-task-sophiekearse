@@ -32,10 +32,10 @@ document.querySelectorAll('.submit').forEach(button => {
 });
 
 //possible suggestions
-const recommendedSongs = [
+var recommendedSongs = [
     {
         score: 0,
-        genre: "pop",
+        genre: "soft pop",
         songs: [
             { title: "Choosin' Texas", artist: "Ella Langley" },
             { title: "Man I Need", artist: "Olivia Dean" },
@@ -51,21 +51,28 @@ const recommendedSongs = [
     },
     {
         score: 1,
-        genre: "rock",
+        genre: "soft rock",
         songs: [
             { title: "The Adults Are Talking", artist: "The Strokes" },
-            { title: "Dumb", artist: "Nirvana"},
             { title: "Spectre", artist: "Radiohead"},
-            { title: "Dance Yrself Clean", artist: "LCD Soundsystem"},
             { title: "Spiderwebs", artist: "No Doubt"},
-            { title: "Black", artist: "Pearl Jam"},
             { title: "Let It Happen", artist: "Tame Impala"},
-            { title: "All the Small Things", artist: "Blink-182"},
             { title: "On Melancholy Hill", artist: "Gorillaz"},
-            { title: "In the End", artist: "Linkin Park"},
             { title: "Sister Europe", artist: "Foo Fighters"},
         ]
     },
+    {
+        genre: "hard rock",
+        songs : [
+            { title: "Dumb", artist: "Nirvana"},
+            { title: "Dance Yrself Clean", artist: "LCD Soundsystem"},
+            { title: "Black", artist: "Pearl Jam"},
+            { title: "All the Small Things", artist: "Blink-182"},
+            { title: "In the End", artist: "Linkin Park"},
+        ]
+    },
+
+
     {
         score: 2,
         genre: "country",
@@ -133,3 +140,6 @@ function calculateAndShowScore() {
     showRecommendation(finalScore);
 }
 
+function recommendation () {
+    
+}
