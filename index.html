@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<!-- My project is going to be a song recommender. 
-Players will input some artist and genre recommenders, and based off of this input, 
-the game will select a popular song for them to listen to. For the list compoennt,
-questions, answers, and the list of potential songs to be recommended will be stored in lists.
-For the function component, I will have functions that determine a song 
-based on the player's input by giving
-them a score. This score will correspond to a certain song. The quiz will be 10 questions long.  -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,116 +8,101 @@ them a score. This score will correspond to a certain song. The quiz will be 10 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Song Recommender</h1>
-    <h2> Answer these 10 questions, and you will be recommended a song most likely to align with your interests from Spotify's current top 200 songs. <div id = "intro"> </h3>
+    <h1>Music Trivia Quiz</h1>
+    <h2> Test your knowledge of music trivia with this quiz & get a corresponding song recommendation!</h2> 
 
-    <!-- question 1 -->
     <div class="question" id="q1">
-    <h3> 1. Which of these would you consider your favorite genre?</h3>
-    <h4>
-    <input type="radio" name="group1" id="a" value="0"> <label for="e">Pop</label>
-    <input type="radio" name="group1" id="b" value="1"> <label for="m">Rock</label>
-    <input type="radio" name="group1" id="a" value="2"> <label for="h">Country</label>
-    <input type="radio" name="group1" id="a" value="3"> <label for="h">Rap</label>
-   </h4>
-   <button class="submit"  id = "nextQuestion" data-next="q2">Next Question</button>
-   </div>
-
-    <!-- question 2 -->
-    <div class="question" id="q2" style="display: none;">
-    <h3> 2. Which of these would you consider your favorite artist?</h3>
-    <h4>
-    <input type="radio" name="group2" id="a" value="0"> <label for="e">Sabrina Carpenter</label>
-    <input type="radio" name="group2" id="b" value="2"> <label for="m">Morgan Wallen</label>
-    <input type="radio" name="group2" id="c" value="3"> <label for="h">Drake</label>
-    <input type="radio" name="group2" id="d" value="1"> <label for="h">Pink Floyd</label>
-   </h4>
-   <button class="submit"  id = "nextQuestion" data-next="q3">Next Question</button>
-   </div>
+    <h3> 1. Who was the first woman ever inducted into the Rock and Roll Hall of Fame? </h3>
+    <h4> 
+     <input type="radio" name="group1" id="q1a" value="0"> <label for="q1a">Janis Joplin</label>
+    <input type="radio" name="group1" id="q1b" value="1"> <label for="q1b">Aretha Franklin</label>
+    <input type="radio" name="group1" id="q1c" value="0"> <label for="q1c">Joan Jett</label>
+    <input type="radio" name="group1" id="q1d" value="0"> <label for="q1d">Stevie Nicks</label>
+</h4>
+</div>
 
     <!-- question 3 -->
-    <div class="question" id="q3" style="display: none;">
-    <h3> 3. What is your favorite decade of music?</h3>
+    <div class="question" id="q2">
+    <h3> 2. Foo Fighters frontman Dave Grohl was formerly a drummer of which famous grunge band?</h3>
     <h4> 
-     <input type="radio" name="group3" id="a" value="2"> <label for="e">2010s-2020s</label>
-    <input type="radio" name="group3" id="b" value="0"> <label for="m">2000s</label>
-    <input type="radio" name="group3" id="c" value="3"> <label for="h">1990s</label>
-    <input type="radio" name="group3" id="d" value="1"> <label for="h">1980s</label>
+     <input type="radio" name="group2" id="q2a" value="1"> <label for="q2a">Nirvana</label>
+    <input type="radio" name="group2" id="q2b" value="0"> <label for="q2b">Pearl Jam</label>
+    <input type="radio" name="group2" id="q2c" value="0"> <label for="q2c">Soundgarden</label>
+    <input type="radio" name="group2" id="q2d" value="0"> <label for="q2d">Alice in Chains</label>
 </h4>
-<button class="submit"  id = "nextQuestion" data-next="q4">Next Question</button>
+</div>
+
+    <!-- question 3 -->
+    <div class="question" id="q3">
+    <h3> 3. Who, to date, has won the most Grammy Awards?</h3>
+    <h4> 
+     <input type="radio" name="group3" id="q3a" value="0"> <label for="q3a">Taylor Swift</label>
+    <input type="radio" name="group3" id="q3b" value="1"> <label for="q3b">Beyoncé</label>
+    <input type="radio" name="group3" id="q3c" value="0"> <label for="q3c">Billie Eilish</label>
+    <input type="radio" name="group3" id="q3d" value="0"> <label for="q3d">Adele</label>
+</h4>
 </div>
 
     <!-- question 4 -->
-    <div class="question" id="q4" style="display: none;">
-    <h3> 4. What type of artist do you prefer?</h3>
+    <div class="question" id="q4">
+    <h3> 4. Who is the lead singer of The Rolling Stones?</h3>
     <h4>
- <input type="radio" name="group4" id="a" value="0"> <label for="e">Mainstream/popular</label>
-    <input type="radio" name="group4" id="b" value="2"> <label for="m">Indie/underground</label>
-    <input type="radio" name="group4" id="c" value="1"> <label for="h">Classic artists</label>
-    <input type="radio" name="group4" id="d" value="3"> <label for="h">Doesn't matter</label>
+ <input type="radio" name="group4" id="q4a" value="0"> <label for="q4a">Elton John</label>
+    <input type="radio" name="group4" id="q4b" value="0"> <label for="q4b">Ozzy Ozbourne</label>
+    <input type="radio" name="group4" id="q4c" value="1"> <label for="q4c">Mick Jagger</label>
+    <input type="radio" name="group4" id="q4d" value="0"> <label for="q4d">Doesn't matter</label>
 </h4>
-<button class="submit"  id = "nextQuestion" data-next="q5">Next Question</button>
 </div>
 
     <!-- question 5 -->
-    <div class="question" id="q5" style="display: none;">
-    <h3> 5. What kind of emotion do you want in the music?</h3>
+    <div class="question" id="q5">
+    <h3> 5. Which of the following is NOT a real Pink Floyd album?</h3>
     <h4>
-    <input type="radio" name="group5" id="a" value="0"> <label for="e">Happy/upbeat</label>
-    <input type="radio" name="group5" id="b" value="1"> <label for="m">Calm/peaceful</label>
-    <input type="radio" name="group5" id="c" value="2"> <label for="h">Sad/emotional</label>
-    <input type="radio" name="group5" id="d" value="3"> <label for="h">Agressive/intense</label>
+    <input type="radio" name="group5" id="q5a" value="0"> <label for="q5a">Dark Side of the Moon</label>
+    <input type="radio" name="group5" id="q5b" value="0"> <label for="q5b">The Wall</label>
+    <input type="radio" name="group5" id="q5c" value="1"> <label for="q5c">Diamonds and Rust</label>
+    <input type="radio" name="group5" id="q5d" value="0"> <label for="q5d">Animals</label>
 </h4>
-<button class="submit"  id = "nextQuestion" data-next="q6">Next Question</button>
 </div>
 
     <!-- question 6 -->
-    <div class="question" id="q6" style="display: none;">
-    <h3> 6. How do you discover new music? </h3>
+    <div class="question" id="q6">
+    <h3> 6. What singer has had a Billboard No. 1 hit in each of the last four decades? </h3>
     <h4>
- <input type="radio" name="group6" id="a" value="2"> <label for="e">Social Media</label>
-    <input type="radio" name="group6" id="b" value="1"> <label for="m">Music Streaming Services</label>
-    <input type="radio" name="group6" id="c" value="3"> <label for="h">Friends/Family</label>
-    <input type="radio" name="group6" id="d" value="0" > <label for="h">Radio</label>
+ <input type="radio" name="group6" id="q6a" value="0"> <label for="q6a">Beyonce</label>
+    <input type="radio" name="group6" id="q6b" value="0"> <label for="q6b">Alanis Morissette</label>
+    <input type="radio" name="group6" id="q6c" value="0"> <label for="q6c">Cher</label>
+    <input type="radio" name="group6" id="q6d" value="1" > <label for="q6d">Mariah Carey</label>
 </h4>
-<button class="submit"  id = "nextQuestion" data-next="q7">Next Question</button>
 </div>
 
     <!-- question 7 -->
-    <div class="question" id="q7" style="display: none;">
-    <h3> 7. What do you do while listening to music?</h3>
+    <div class="question" id="q7">
+    <h3> 7. Who was the very first American idol winner?</h3>
     <h4>
- <input type="radio" name="group7" id="a" value="0"> <label for="e">Dance</label>
-    <input type="radio" name="group7" id="b" value="1"> <label for="m">Relax</label>
-    <input type="radio" name="group7" id="c" value="2"> <label for="h">Focus</label>
-    <input type="radio" name="group7" id="d" value="3"> <label for="h">Drive</label>
+ <input type="radio" name="group7" id="q7a" value="1"> <label for="q7a">Kelly Clarkson</label>
+    <input type="radio" name="group7" id="q7b" value="0"> <label for="q7b">Maddie Poppe</label>
+    <input type="radio" name="group7" id="q7c" value="0"> <label for="q7c">Candice Glober</label>
+    <input type="radio" name="group7" id="q7d" value="0"> <label for="q7d">Abi Carter</label>
 </h4>
-<button class="submit"  id = "nextQuestion" data-next="q8">Next Question</button>
 </div>
 
     <!-- question 8 -->
-    <div class="question" id="q8" style="display: none;">
-    <h3> 8. What emotion do you want the song to give you?</h3>
+    <div class="question" id="q8">
+    <h3> 8. What song did Paul Mccartney and Michael Jackson collaborate on?</h3>
     <h4>
- <input type="radio" name="group8" id="a" value="0"> <label for="e">Excitement</label>
-    <input type="radio" name="group8" id="b" value="1"> <label for="m">Contentment</label>
-    <input type="radio" name="group8" id="c" value="2"> <label for="h">Sadness</label>
-    <input type="radio" name="group8" id="d" value="3"> <label for="h">Anger</label>
+ <input type="radio" name="group8" id="q8a" value="0"> <label for="q8a">Dirty Diana</label>
+    <input type="radio" name="group8" id="q8b" value="0"> <label for="q8b">Wanna be Startin' Somethin'</label>
+    <input type="radio" name="group8" id="q8c" value="0"> <label for="q8c">Don't Stop til You Get Enough</label>
+    <input type="radio" name="group8" id="q8d" value="1"> <label for="q8d">The Girl is Mine</label>
 </h4>
-<button class="submit"  id = "nextQuestion" data-next="result">Finish</button>
 </div>
+    <input type = "button" id = "submit" value = "Submit">
 
-
-    <div id="result" style="display: none;">
-        <h3>Your recommended song is: <span id="song"></span></h3>
+    <div id="result">
+     <h2 id="score"></h2>
+     <h2 id="song"></h2>
     </div>
-
-<div class = "question" id = "results" style = "display: none;">
-    <div id = "songResult"> 
-        <h2 id = "songTitle"></h2>
-        <p id = "songArtist"></p>
-        <p id = "songGenre"></p>
-</div>
 
 </body>
 </html>
