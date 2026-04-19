@@ -1,4 +1,5 @@
 // add javascript here
+//function to calculate score of game
 function calculateScore(numQuestions) {
     let total = 0;
     for (let i = 1; i <= numQuestions; i++) {
@@ -10,7 +11,7 @@ function calculateScore(numQuestions) {
     return total;
 }
 
-   
+// list that stores songs that will be recommended based on score of game
 var songs = [
     { title: "Dumb", artist: "Nirvana", genre: "Grunge" },
     { title: "On Melancholy Hill", artist: "Gorillaz", genre: "Synth Pop" },
@@ -18,6 +19,7 @@ var songs = [
     { title: "Layla", artist: "Derek and the Dominos", genre: "Rock" },
 ]
 
+// once user clicks button, score is calculated and song recommendation is given based on score of game.
 document.getElementById("submit").addEventListener("click", function() {
 
     let score = calculateScore(8);
