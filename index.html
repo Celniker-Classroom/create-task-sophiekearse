@@ -8,20 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id = "page">
     <h1>Music Trivia Quiz</h1>
-    <h2> Test your knowledge of music trivia with this quiz & get a corresponding song recommendation!</h2> 
+    <h2> Test your knowledge of music trivia with this quiz & get a corresponding song recommendation!</h2>
+    
+    <!-- starting page -->
+    <div id="start">
+        <h3> Before you begin, enter your name:</h3>
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="button" id="startBtn" value="Start Quiz" >
 
+
+    </div>
+<!-- question 1 -->
     <div class="question" id="q1">
     <h3> 1. Who was the first woman ever inducted into the Rock and Roll Hall of Fame? </h3>
     <h4> 
-     <input type="radio" name="group1" id="q1a" value="0"> <label for="q1a">Janis Joplin</label>
-    <input type="radio" name="group1" id="q1b" value="1"> <label for="q1b">Aretha Franklin</label>
-    <input type="radio" name="group1" id="q1c" value="0"> <label for="q1c">Joan Jett</label>
-    <input type="radio" name="group1" id="q1d" value="0"> <label for="q1d">Stevie Nicks</label>
+     <input type="radio" name="group1" id="q1a" class ="q" value="0"> <label for="q1a">Janis Joplin</label>
+    <input type="radio" name="group1" id="q1b" class ="q" value="1"> <label for="q1b">Aretha Franklin</label>
+    <input type="radio" name="group1" id="q1c" class ="q" value="0"> <label for="q1c">Joan Jett</label>
+    <input type="radio" name="group1" id="q1d" class ="q" value="0"> <label for="q1d">Stevie Nicks</label>
+    <h5>
+    <input type="button" id = "nextBtn"class="nextBtn" value="Next Question">
+    </h5>
 </h4>
 </div>
-
-    <!-- question 3 -->
+    <!-- question 2 -->
     <div class="question" id="q2">
     <h3> 2. Foo Fighters frontman Dave Grohl was formerly a drummer of which famous grunge band?</h3>
     <h4> 
@@ -29,6 +41,9 @@
     <input type="radio" name="group2" id="q2b" value="0"> <label for="q2b">Pearl Jam</label>
     <input type="radio" name="group2" id="q2c" value="0"> <label for="q2c">Soundgarden</label>
     <input type="radio" name="group2" id="q2d" value="0"> <label for="q2d">Alice in Chains</label>
+ <h5>
+    <input type="button" class="nextBtn" value="Next Question">
+    </h5>
 </h4>
 </div>
 
@@ -40,6 +55,9 @@
     <input type="radio" name="group3" id="q3b" value="1"> <label for="q3b">Beyoncé</label>
     <input type="radio" name="group3" id="q3c" value="0"> <label for="q3c">Billie Eilish</label>
     <input type="radio" name="group3" id="q3d" value="0"> <label for="q3d">Adele</label>
+     <h5>
+    <input type="button" class="nextBtn" value="Next Question">
+    </h5>
 </h4>
 </div>
 
@@ -51,6 +69,9 @@
     <input type="radio" name="group4" id="q4b" value="0"> <label for="q4b">Ozzy Ozbourne</label>
     <input type="radio" name="group4" id="q4c" value="1"> <label for="q4c">Mick Jagger</label>
     <input type="radio" name="group4" id="q4d" value="0"> <label for="q4d">Doesn't matter</label>
+      <h5>
+    <input type="button" class="nextBtn" value="Next Question">
+    </h5>
 </h4>
 </div>
 
@@ -62,6 +83,9 @@
     <input type="radio" name="group5" id="q5b" value="0"> <label for="q5b">The Wall</label>
     <input type="radio" name="group5" id="q5c" value="1"> <label for="q5c">Diamonds and Rust</label>
     <input type="radio" name="group5" id="q5d" value="0"> <label for="q5d">Animals</label>
+      <h5>
+    <input type="button" class="nextBtn" value="Next Question">
+    </h5>
 </h4>
 </div>
 
@@ -73,6 +97,9 @@
     <input type="radio" name="group6" id="q6b" value="0"> <label for="q6b">Alanis Morissette</label>
     <input type="radio" name="group6" id="q6c" value="0"> <label for="q6c">Cher</label>
     <input type="radio" name="group6" id="q6d" value="1" > <label for="q6d">Mariah Carey</label>
+      <h5>
+    <input type="button" class="nextBtn" value="Next Question">
+    </h5>
 </h4>
 </div>
 
@@ -84,6 +111,9 @@
     <input type="radio" name="group7" id="q7b" value="0"> <label for="q7b">Maddie Poppe</label>
     <input type="radio" name="group7" id="q7c" value="0"> <label for="q7c">Candice Glober</label>
     <input type="radio" name="group7" id="q7d" value="0"> <label for="q7d">Abi Carter</label>
+      <h5>
+    <input type="button" class="nextBtn" value="Next Question">
+    </h5>
 </h4>
 </div>
 
@@ -95,6 +125,9 @@
     <input type="radio" name="group8" id="q8b" value="0"> <label for="q8b">Wanna be Startin' Somethin'</label>
     <input type="radio" name="group8" id="q8c" value="0"> <label for="q8c">Don't Stop til You Get Enough</label>
     <input type="radio" name="group8" id="q8d" value="1"> <label for="q8d">The Girl is Mine</label>
+    <h5>
+     <input type="button" class="nextBtn" value="Finish Quiz">
+     </h5>
 </h4>
 </div>
     <input type = "button" id = "submit" value = "Submit">
@@ -103,6 +136,6 @@
      <h2 id="score"></h2>
      <h2 id="song"></h2>
     </div>
-
+</div>
 </body>
 </html>
