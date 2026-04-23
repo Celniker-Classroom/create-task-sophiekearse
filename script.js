@@ -1,9 +1,20 @@
-// add javascript here
+// basic setup
 let currentQuestion = 1;
 const totalQuestions = 8;
+document.getElementById("restart").style.display = 'none';
+document.getElementById("nextBtn").style.display = 'none';
+document.getElementById("q1").style.display = 'none';
 
-document.getElementById("nextBtn").hidden = true;
-document.getElementById(`q${currentQuestion}`).hidden = true;
+
+// Hide all other questions initially
+for (let i = 2; i <= totalQuestions; i++) {
+    document.getElementById(`q${i}`).style.display = 'none';
+}
+document.getElementById("submit").style.display = 'none';
+document.getElementById("result").style.display = 'none';
+
+
+
 //function to calculate score of game
 function calculateScore(numQuestions) {
     let total = 0;
@@ -23,19 +34,29 @@ var songs = [
     { title: "Strawberry Fields Forever", artist: "The Beatles", genre: "Rock" },
     { title: "Layla", artist: "Derek and the Dominos", genre: "Rock" },
 ]
+
+//sets up first question after user clicks start button, and shows next button to move through quiz
 document.getElementById("startBtn").addEventListener("click", function() {
-    document.getElementById("nextBtn").hidden = false;
-    document.getElementById(`q${currentQuestion}`).hidden = false;
+    if (document.getElementById("name").value.trim() === "") {
+        alert("Please enter your name before starting the quiz.");
+        return;
+    }   
+    else {
+    
+    document.getElementById("nextBtn").style.display = 'block';
+    document.getElementById("q1").style.display = 'block';
+    document.getElementById("start").style.display = 'none';
+    }
 });
 
 
-// Function provided by inline AI text generator
+// Function provided by inline AI text generator, I asked it to help me set up the next button to move through the quiz, and to check if a radio button for the current question is checked before allowing user to move to next question. If no radio button is checked, an alert will pop up asking user to select an answer before proceeding to next question.
 document.querySelectorAll('.nextBtn').forEach(btn => {
     btn.addEventListener('click', function() {
        
 
-        // Hide current question
-        if (document.querySelector("input[type='radio']:checked") === false) {
+        // Check if a radio button for the current question is checked
+        if (!document.querySelector(`input[name="group${currentQuestion}"]:checked`)) {
             // Do nothing
             alert("Please select an answer before proceeding to the next question.");
             return;
@@ -71,11 +92,34 @@ document.getElementById("submit").addEventListener("click", function() {
         songIndex = 3;
     
 
-    document.getElementById("song").textContent = "Song recommendation: " +songs[songIndex].title + " -- " + songs[songIndex].artist + 
+//final result
+let name = document.getElementById("name").value;
+let names = name.toUpperCase();
+
+    document.getElementById("song").textContent = names + " your song recommendation is: " +songs[songIndex].title + " -- " + songs[songIndex].artist + 
     " (" + songs[songIndex].genre + ")";
+    document.getElementById("submit").style.display = "none";
+    document.getElementById("restart").style.display = "block";
+
 
     }
 );
+
+
+//restart button so user can retry quiz
+document.getElementById("restart").addEventListener("click", function() {
+    currentQuestion = 1;
+    document.getElementById("restart").style.display = 'none';
+    document.getElementById("nextBtn").style.display = 'block';
+    document.getElementById("q1").style.display = 'block';
+    document.getElementById("result").style.display = 'none';
+    // Hide all other questions
+    for (let i = 2; i <= totalQuestions; i++) {
+        document.getElementById(`q${i}`).style.display = 'none';
+    }
+    // Uncheck all radio buttons
+    document.querySelectorAll('input[type="radio"]').forEach(radio => radio.checked = false);
+}); 
 
 
     
