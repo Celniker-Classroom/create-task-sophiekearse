@@ -123,4 +123,13 @@ document.getElementById("restart").addEventListener("click", function() {
 
 
     
-    
+    document.getElementById("darkModeBtn").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+    text = document.getElementById("darkModeBtn").textContent;
+    if (text === "Dark Mode") {
+        document.getElementById("darkModeBtn").textContent = "Light Mode";
+    } else {
+        document.getElementById("darkModeBtn").textContent = "Dark Mode";
+    }
+
+});
